@@ -22,3 +22,6 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/churn-api
+
+      - name: Tigger Render Deploy
+        run: curl -X POST https://api.render.com/deploy/srv-d7fg01naqgkc739prpvg?key=haQ36OrjWdY
